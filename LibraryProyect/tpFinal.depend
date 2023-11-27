@@ -1,0 +1,66 @@
+# depslib dependency file v1.0
+1700724615 source:c:\users\eloy\desktop\tpfinal\main.c
+	"miembrosLib.h"
+
+1700725528 c:\users\eloy\desktop\tpfinal\miembroslib.h
+	"LibrosLib.h"
+
+1700725940 source:c:\users\eloy\desktop\tpfinal\miembroslib.c
+	"dependenciasLib.h"
+	"miembrosLib.h"
+
+1700724983 c:\users\eloy\desktop\tpfinal\dependenciaslib.h
+	<stdio.h>
+	<stdlib.h>
+	"stdbool.h"
+	"windows.h"
+	"math.h"
+
+1700712382 source:c:\users\eloy\desktop\tpfinal\dependenciaslib.c
+	"dependenciasLib.h"
+
+1700726572 source:c:\users\eloy\desktop\tpfinal\libroslib.c
+	"librosLib.h"
+
+1700721677 c:\users\eloy\desktop\tpfinal\libroslib.h
+	"dependenciasLib.h"
+
+1700726406 source:c:\users\eloy\desktop\tpfinal\prestamoslib.c
+	"prestamosLib.h"
+
+1700725639 c:\users\eloy\desktop\tpfinal\prestamoslib.h
+	"miembrosLib.h"
+
+1700712384 source:g:\tpfinal\dependenciaslib.c
+	"dependenciasLib.h"
+
+1700916144 g:\tpfinal\dependenciaslib.h
+	<stdio.h>
+	<stdlib.h>
+	"stdbool.h"
+	"time.h"
+	"windows.h"
+	"math.h"
+
+1700904848 source:g:\tpfinal\libroslib.c
+	"librosLib.h"
+
+1700915568 g:\tpfinal\libroslib.h
+	"dependenciasLib.h"
+
+1700915446 source:g:\tpfinal\main.c
+	"prestamosLib.h"
+
+1700915564 g:\tpfinal\prestamoslib.h
+	"miembrosLib.h"
+
+1700915530 g:\tpfinal\miembroslib.h
+	"LibrosLib.h"
+
+1700725942 source:g:\tpfinal\miembroslib.c
+	"dependenciasLib.h"
+	"miembrosLib.h"
+
+1700913840 source:g:\tpfinal\prestamoslib.c
+	"prestamosLib.h"
+
