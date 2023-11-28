@@ -64,3 +64,33 @@
 1700913840 source:g:\tpfinal\prestamoslib.c
 	"prestamosLib.h"
 
+1700904848 source:c:\users\eloy\documents\github\libraryproject\libraryproyect\libroslib.c
+	"librosLib.h"
+
+1700915568 c:\users\eloy\documents\github\libraryproject\libraryproyect\libroslib.h
+	"dependenciasLib.h"
+
+1700916144 c:\users\eloy\documents\github\libraryproject\libraryproyect\dependenciaslib.h
+	<stdio.h>
+	<stdlib.h>
+	"stdbool.h"
+	"time.h"
+	"windows.h"
+	"math.h"
+
+1700915446 source:c:\users\eloy\documents\github\libraryproject\libraryproyect\main.c
+	"prestamosLib.h"
+
+1700915564 c:\users\eloy\documents\github\libraryproject\libraryproyect\prestamoslib.h
+	"miembrosLib.h"
+
+1700915530 c:\users\eloy\documents\github\libraryproject\libraryproyect\miembroslib.h
+	"LibrosLib.h"
+
+1700725942 source:c:\users\eloy\documents\github\libraryproject\libraryproyect\miembroslib.c
+	"dependenciasLib.h"
+	"miembrosLib.h"
+
+1701089772 source:c:\users\eloy\documents\github\libraryproject\libraryproyect\dependenciaslib.c
+	"dependenciasLib.h"
+

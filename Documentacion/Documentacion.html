@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<h1>Estructuras</h1>
+<h2>Miembros</h2>
+<img src="EstructuraMienbros.PNG"><br>
+<h2>Libros</h2>
+<img src="EstructuraLibros.PNG"><br>
+<h2>Prestamos</h2>
+<img src="EstructuraPrestamos.PNG"><br>
+<h2>Dependencias</h2>
+<img src="dependencias.PNG"><br>
+ <h1>FUNCIONES</h1>
+<body>
+  <h2>GESTION DE LIBROS</h2>
+<ul>
+    <li><code>void menuLibros();</code> - Menú de gestión de libros</li>
+    <li><code>void menuMostrarPorCampoLibro();</code> - Muestra según el campo el/los libros pertinentes</li>
+    <li><code>void agregarLibroArchivo(stLibro libroAgregable);</code> - Agrega un libro al archivo</li>
+    <li><code>void cargarstLibro(stLibro *nuevoLibro);</code> - Carga todos los campos de un libro</li>
+    <li><code>void modificarLibroEnRegistro();</code> - Permite la modificación de libros</li>
+    <li><code>void modificarstLibro(stLibro *libroAModificar);</code> - Pregunta qué campo se desea editar y se edita mientras se ve por pantalla</li>
+    <li><code>void mostrarCantLibrosCargados();</code> - Muestra la cantidad de libros cargados (numeralmente)</li>
+    <li><code>void mostrarLibroPorAutor(char autor[]);</code> - Muestra el libro según su autor</li>
+    <li><code>void mostrarLibroPorGenero(char genero[]);</code> - Muestra el libro según su género</li>
+    <li><code>void mostrarLibroPorISBN(int isbn);</code> - Muestra el libro según su ISBN</li>
+    <li><code>void mostrarLibroPorTitulo(char titulo[]);</code> - Muestra el libro según su título</li>
+    <li><code>void mostrarLibrosDisponibles();</code> - Muestra los libros disponibles</li>
+    <li><code>void mostrarRegistroLibros();</code> - Muestra el archivo libro por pantalla con todos sus elementos que estén cargados</li>
+    <li><code>void mostrarstLibro(stLibro libro);</code> - Muestra la estructura libro</li>
+    <li><code>static void informarErrorAperturaArchivoLibros();</code> - Muestra un mensaje de error de apertura</li>
+    <li><code>bool isbnExisteEnArchivo(int isbnABuscar);</code> - Verifica si un libro existe en el archivo por ISBN</li>
+    <li><code>bool stringExisteEnArchivoLibro(char cadena[], char tipo[]);</code> - Verifica si una cadena existe en el archivo de libros según tipo (título, autor o género)</li>
+    <li><code>int copiarArchivo(char archivoOrigen[], char archivoDestino[]);</code> - Copia el contenido del archivo origen al archivo destino</li>
+    <li><code>void eliminarArchivoSiVacio(char nombreArchivo[]);</code> - Verifica si el archivo está vacío y lo elimina en ese caso</li>
+    <li><code>void eliminarLibroDeArchivo();</code> - Elimina un libro del archivo mediante su ISBN</li>
+    <li><code>void moduloEliminarLibrodeArchivo(int isbm);</code> - Busca y elimina un libro por su ISBN del archivo</li>
+</ul>
+<h2>Gestion de miembros</h2>
+<ul>
+    <li><code>void menuMiembros();</code> - Llamada a funciones para gestionar miembros y archivos</li>
+    <li><code>void menuMostrarPorCampo();</code> - Menú para mostrar miembros según un campo específico</li>
+    <li><code>void registrarMiembro();</code> - Carga y verifica si el miembro ya existe en el archivo</li>
+    <li><code>void cargarstMiembro(stMiembro *nuevoMiembro);</code> - Carga todos los campos de stMiembros por el usuario</li>
+    <li><code>stMiembro obtenerMiembro(int id);</code> - Obtiene un miembro por su ID</li>
+    <li><code>void modificarMiembroEnRegistro();</code> - Obtiene el usuario y llama a la modificación de sus campos</li>
+    <li><code>void modificarstMiembro(stMiembro *miembroAModificar);</code> - Modifica los campos de la estructura miembro</li>
+    <li><code>int obtenerUltimoIdMiembros();</code> - Busca y retorna el último ID del archivo de miembros</li>
+    <li><code>void agregarMiembroArchivo(stMiembro miembro);</code> - Carga el miembro recibido al final del archivo</li>
+    <li><code>bool miembroExisteEnArchivo(stMiembro miembroAVerificar);</code> - Verifica si el miembro está en el archivo</li>
+    <li><code>bool verificarMiembroID(int idMiembro);</code> - Verifica si el ID recibido existe en el archivo</li>
+    <li><code>void mostrarArchivoMiembros();</code> - Muestra por pantalla todos los miembros registrados</li>
+    <li><code>void mostrarMiembroID(int id);</code> - Muestra por ID (debería mostrar solamente 1)</li>
+    <li><code>void mostrarMiembroDNI(char dni[]);</code> - Muestra por DNI (debería mostrar solamente 1)</li>
+    <li><code>void mostrarMiembroNombre(char nombre[]);</code> - Muestra por Nombre (debería mostrar todas las coincidencias)</li>
+    <li><code>void mostrarMiembroApellido(char apellido[]);</code> - Muestra por Apellido (debería mostrar todas las coincidencias)</li>
+    <li><code>void mostrarCantMiembrosCargados();</code> - Imprime por pantalla la cantidad de miembros cargados</li>
+    <li><code>void mostrarstMiembro(stMiembro miembroMostrable);</code> - Muestra el miembro recibido por pantalla</li>
+    <li><code>static void mostrarCajitaDeuda(float monto);</code> - Muestra la deuda del miembro</li>
+    <li><code>static void informarErrorAperturaArchivoMiembros();</code> - Muestra un mensaje de error de apertura</li>
+    <li><code>void informarErrorIDNoValido();</code> - Informa sobre un ID no válido</li>
+    <li><code>void purgarArchivoMiembros();</code> - Elimina los miembros no activos del registro y reordena el archivo</li>
+    <li><code>nodoMiembro *inicListMiembro();</code> - Retorna NULL para los nodoMiembro</li>
+    <li><code>nodoMiembro *crearNodoMiembro(stMiembro datosMiembro);</code> - Crea un nodo y lo retorna cargado</li>
+    <li><code>nodoMiembro *agregarAlistaMiembro(nodoMiembro *lista, nodoMiembro *nuevoMiembroNodo);</code> - Agrega el nodo a lo último de la lista</li>
+    <li><code>void pasarListaMiembrosAArchivo(nodoMiembro *lista);</code> - Pasa los nodos miembros al archivo de manera ordenada</li>
+    <li><code>void mostrarListaMiembros(nodoMiembro *lista);</code> - Muestra recursivamente la lista</li>
+</ul>
+<h2>Prestamos y devoluciones</h2>
+<ul>
+    <li><code>void prestamoMenu();</code></li>
+    <li><code>void mostrarCategorias(nodoLibro *lista);</code></li>
+    <li><code>stPrestamo obtenerReservaLibro(int ibsm);</code></li>
+    <li><code>void imprimirPrestamo(stPrestamo prestamo);</code></li>
+</ul>
+
+<h3>ARBOLES</h3>
+<ul>
+    <li><code>arbolNodoLibro * inicArbolNodo();</code></li>
+    <li><code>void verArbolCategoria(char categoria[], nodoLibro * lista);</code></li>
+    <li><code>void imprimirArbol(arbolNodoLibro * raiz);</code></li>
+    <li><code>arbolNodoLibro * crearNodoArbolLibro(stLibro dato);</code></li>
+    <li><code>arbolNodoLibro * insertarLibroEnArbol(arbolNodoLibro * nuevoLibro, arbolNodoLibro * raiz);</code></li>
+    <li><code>bool nodoArbolLibroExiste(int ibsm, arbolNodoLibro *raiz);</code></li>
+    <li><code>arbolNodoLibro * encontrarCategoria(char categoria[], nodoLibro * lista);</code></li>
+    <li><code>arbolNodoLibro * obtenerLibroPorISBN(int isbn, arbolNodoLibro * raiz);</code></li>
+</ul>
+
+<h3>NODOS | LISTA</h3>
+<ul>
+    <li><code>nodoLibro * pasarLibrosArbol(nodoLibro * lista);</code></li>
+    <li><code>bool categoriaExisteEnLista(char categoria[], nodoLibro * lista);</code></li>
+    <li><code>nodoLibro * crearCategoria(char categoria[], nodoLibro * lista);</code></li>
+    <li><code>nodoLibro * crearNodoLibroParametro(char categoria[]);</code></li>
+    <li><code>nodoLibro * inicNodoLibro();</code></li>
+    <li><code>arbolNodoLibro * cargarLibroArbol(arbolNodoLibro * nuevoLibro, arbolNodoLibro * raiz);</code></li>
+    <li><code>nodoLibro *prestarLibro(nodoLibro *lista);</code></li>
+</ul>
+
+<h3>ARCHIVOS</h3>
+<ul>
+    <li><code>void agregarPrestamoArchivo(stPrestamo prestamo);</code></li>
+    <li><code>bool prestamoExiste(int id);</code></li>
+    <li><code>void mostrarArchivoPrestamos();</code></li>
+    <li><code>void purgarPrestamos();</code></li>
+</ul>
+
+<h3>MIEMBROS</h3>
+<ul>
+    <li><code>void cambiarEstadoMiembro(int id);</code></li>
+</ul>
+
+<h3>LIBROS</h3>
+<ul>
+    <li><code>void cambiarEstadoLibro(stLibro libro);</code></li>
+</ul>
+
+<h3>FECHAS</h3>
+<ul>
+    <li><code>void cargarFecha(stFecha *fecha);</code></li>
+    <li><code>void extenderPlazo(stFecha *fecha);</code></li>
+</ul>
+
+<h3>DEVOLUCIONES</h3>
+<ul>
+    <li><code>void devolverLibro();</code></li>
+    <li><code>void eliminarDeudaMiembro(int ID);</code></li>
+    <li><code>void eliminarDeudorArchivo(int ID);</code></li>
+</ul>
+<h2>Mis "dependencias"</h2>
+<ul>
+    <li><code>void generarTitulo(char titulo[]);</code> - Crea un título "distintivo"</li>
+    <li><code>void mostrarCadena(char arr[]);</code> - Muestra por parámetro una cadena de caracteres</li>
+    <li><code>void mostrarCadenaMsg(char msg[], char arr[]);</code> - Muestra por parámetro una cadena de caracteres: dato</li>
+    <li><code>void aplicarOffset(char texto[]);</code> - Aplica tabulaciones según el largo del texto</li>
+    <li><code>void debug(char msg[]);</code> - Se utiliza para ver los procesos del programa</li>
+    <li><code>void crearLinea();</code> - Imprime una línea en pantalla</li>
+    <li><code>void informarValorInvalido();</code> - Informa que el valor ingresado no es válido</li>
+</ul>
+
+<ul>
+    <li><code>void asignarStringMsg(char cadena[], char mensaje[]);</code> - Recibe por referencia un string y un mensaje al usuario</li>
+    <li><code>void asignarString(char cadena[]);</code> - Recibe por referencia un string para ser cargado</li>
+    <li><code>void asignarValorMsg(int *valor, char mensaje[]);</code> - Recibe por referencia un valor y un mensaje al usuario</li>
+    <li><code>void asignarValor(int *valor);</code> - Recibe por referencia un valor para ser cargado</li>
+</ul>
+
+<ul>
+    <li><code>void colorVerde();</code> - Cambia el color de la consola a verde</li>
+    <li><code>void colorRojo();</code> - Cambia el color de la consola a rojo</li>
+    <li><code>void colorAmarillo();</code> - Cambia el color de la consola a amarillo</li>
+    <li><code>void colorBlanco();</code> - Cambia el color de la consola a blanco</li>
+</ul>
+
+<ul>
+    <li><code>bool rangoValido(int min, int max, int opcion);</code> - Valida que la opción esté entre el mínimo y el máximo</li>
+    <li><code>bool preguntarConfirmacion(char msg[]);</code> - Recibe un string para retornar un booleano con la respuesta</li>
+</ul>
+
+
+</body>
+</html>
